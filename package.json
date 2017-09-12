@@ -1,0 +1,75 @@
+{
+  "name": "feathers-nuxt",
+  "description": "A FeathersJS + NuxtJS demo/boilerplate",
+  "version": "0.0.0",
+  "homepage": "https://github.com/silvestreh/feathers-nuxt",
+  "main": "src",
+  "keywords": [
+    "feathers"
+  ],
+  "nuxt": {
+    "host": "0.0.0.0",
+    "port": "3030"
+  },
+  "author": {
+    "name": "Silvestre Herrera",
+    "email": "silvestre.herrera@gmail.com"
+  },
+  "contributors": [],
+  "bugs": {},
+  "directories": {
+    "lib": "src",
+    "test": "test/"
+  },
+  "engines": {
+    "node": ">= 6.0.0",
+    "yarn": ">= 0.18.0"
+  },
+  "scripts": {
+    "test": "npm run eslint && npm run mocha",
+    "eslint": "eslint src/. test/. --config .eslintrc.js",
+    "build": "nuxt build",
+    "dev": "DEBUG=nuxt:* nodemon --watch src/ --watch config/ src/index.js",
+    "prestart": "npm run build",
+    "start": "NODE_ENV=production node src/",
+    "mocha": "mocha test/ --recursive"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.0",
+    "compression": "^1.7.0",
+    "cors": "^2.8.4",
+    "feathers": "^2.2.0",
+    "feathers-authentication": "^1.2.7",
+    "feathers-authentication-client": "^0.3.3",
+    "feathers-authentication-hooks": "^0.1.4",
+    "feathers-authentication-jwt": "^0.3.2",
+    "feathers-authentication-local": "^0.4.4",
+    "feathers-configuration": "^0.4.1",
+    "feathers-errors": "^2.9.2",
+    "feathers-hooks": "^2.0.2",
+    "feathers-hooks-common": "^3.7.2",
+    "feathers-mongoose": "^5.1.2",
+    "feathers-rest": "^1.8.0",
+    "feathers-socketio": "^2.0.0",
+    "feathers-vuex": "^0.8.0",
+    "helmet": "^3.8.1",
+    "js-cookie": "^2.1.4",
+    "mongoose": "^4.11.11",
+    "normalize.css": "^7.0.0",
+    "nuxt": "^1.0.0-rc11",
+    "serve-favicon": "^2.4.3",
+    "socket.io-client": "^2.0.3",
+    "winston": "^2.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^4.6.1",
+    "eslint-config-airbnb": "^15.1.0",
+    "eslint-import-resolver-webpack": "^0.8.3",
+    "eslint-plugin-html": "^3.2.1",
+    "eslint-plugin-import": "^2.7.0",
+    "mocha": "^3.5.3",
+    "nodemon": "^1.12.0",
+    "request": "^2.81.0",
+    "request-promise": "^4.2.1"
+  }
+}
