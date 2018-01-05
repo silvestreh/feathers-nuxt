@@ -1,6 +1,6 @@
 {
-  "name": "nuxt-on-feathers",
-  "description": "this is a fork of feathers-nuxt",
+  "name": "feathers-nuxt",
+  "description": "A FeathersJS + NuxtJS demo/boilerplate",
   "version": "0.0.0",
   "homepage": "https://github.com/silvestreh/feathers-nuxt",
   "main": "src",
@@ -12,10 +12,10 @@
     "port": "3030"
   },
   "author": {
-    "name": "Davi Teodoro",
-    "email": "davi.a.teodoro@gmail.com"
+    "name": "Silvestre Herrera",
+    "email": "silvestre.herrera@gmail.com"
   },
-  "contributors": [],
+  "contributors": ["Davi Teodoro"],
   "bugs": {},
   "directories": {
     "lib": "src",
