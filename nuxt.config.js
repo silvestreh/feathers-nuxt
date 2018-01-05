@@ -13,11 +13,10 @@ module.exports = {
   },
   build: {
     vendor: [
-      'feathers/client',
-      'feathers-socketio/client',
+      '@feathersjs/feathers',
+      '@feathersjs/socketio-client',
       'socket.io-client',
-      'feathers-hooks',
-      'feathers-authentication-client',
+      '@feathersjs/authentication-client',
     ],
   },
   css: ['normalize.css'],
