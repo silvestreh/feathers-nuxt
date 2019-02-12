@@ -6,6 +6,14 @@
 
 This project uses [Feathers](http://feathersjs.com). An open source web framework for building modern real-time applications.
 
+It also uses NeDB to store users. This is because NeDB handles data persistence in text files and it won't require you to have MongoDB, PostgreSQL, or any other database installed to just try this boilerplate.
+
+Feathers and Vue/Nuxt integration is done through the amazing [`feathers-vuex`](https://github.com/feathers-plus/feathers-vuex).
+
+## ⚠️ Support
+
+You may use this boilerplate for whatever projects you want, but beware that updates to it will be scarse. You're very much welcome to contribute if you find something is off.
+
 ## Getting Started
 
 Getting up and running is as easy as 1, 2, 3.
@@ -43,14 +51,18 @@ $ feathers help                           # Show all commands
 
 For more information on all the things you can do with Feathers visit [docs.feathersjs.com](http://docs.feathersjs.com).
 
+For more information on `feathers-vuex`, visit [their docs](https://feathers-plus.github.io/v1/feathers-vuex/index.html).
+
+For more information on `nuxt`, visit [their docs](https://nuxtjs.org/guide).
+
 ## Changelog
 
-__0.1.0__
+__0.0.0__
 
 - Initial release
 
 ## License
 
-Copyright (c) 2018
+Copyright (c) 2019 Silvestre Herrera.
 
 Licensed under the [MIT license](LICENSE).
