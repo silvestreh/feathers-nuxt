@@ -1,0 +1,41 @@
+* { box-sizing: border-box; }
+
+html, body {
+  font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #333;
+}
+
+section {
+  padding: 0 2em;
+}
+
+button {
+  background: coral;
+  border: 1px solid transparent;
+  border-radius: .25em;
+  color: white;
+  cursor: pointer;
+  font-size: .85em;
+  line-height: 2.5;
+  padding: 0 1em;
+}
+
+button.ghost {
+  border-color: coral;
+  background: none;
+  color: coral;
+}
+
+input {
+  border: 1px solid #DDD;
+  border-radius: .25em;
+  line-height: 2;
+  padding: 0 .75em;
+}
+
+input:focus {
+  border-color: coral;
+  outline: none;
+}
