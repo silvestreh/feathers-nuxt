@@ -27,7 +27,7 @@
     "test": "npm run eslint && npm run mocha",
     "eslint": "eslint src/. test/. --config .eslintrc.json",
     "dev": "cross-env DEBUG=nuxt:* nodemon src/",
-    "start": "node src/",
+    "start": "npm run build && node src/",
     "mocha": "cross-env NODE_ENV=test mocha test/ --recursive --exit"
   },
   "dependencies": {

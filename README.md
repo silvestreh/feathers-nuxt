@@ -10,6 +10,15 @@ It also uses NeDB to store users. This is because NeDB handles data persistence 
 
 Feathers and Vue/Nuxt integration is done through the amazing [`feathers-vuex`](https://github.com/feathers-plus/feathers-vuex).
 
+Remember to set these environment variables when running in production:
+
+```shell
+NODE_ENV=production
+PORT=3030 # or whatever port you want to use
+```
+
+After that, you can safely start the application by using `npm start`, which will trigger a Nuxt build and then start the app.
+
 ## ⚠️ Support
 
 You may use this boilerplate for whatever projects you want, but beware that updates to it will be scarse. You're very much welcome to contribute if you find something is off.
