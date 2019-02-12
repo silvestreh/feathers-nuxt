@@ -1,5 +1,5 @@
 const { Nuxt, Builder } = require('nuxt');
-const nuxtConfig = require('../../config/nuxt.config');
+const nuxtConfig = require('../../nuxt.config');
 
 module.exports = function (app) {
   const nuxt = new Nuxt(nuxtConfig);
