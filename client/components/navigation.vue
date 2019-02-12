@@ -26,7 +26,7 @@ export default {
   border-bottom: 1px solid #F2F2F2;
   display: flex;
   list-style: none;
-  margin: 0 0 1em;
+  margin: 0 -2em 1em;
   padding: 1em;
 }
 

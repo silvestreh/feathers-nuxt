@@ -2,10 +2,13 @@
   <section>
     <navigation />
     <h1>Authenticate!</h1>
-    <input v-model="email" placeholder="email" />
-    <input v-model="password" placeholder="password" type="password" />
-    <button @click.prevent="login">Login</button>
-    <button @click.prevent="signup">Sign up</button>
+    <form class="auth-form">
+      <ul>
+        <li><input v-model="email" placeholder="email" /></li>
+        <li><input v-model="password" placeholder="password" type="password" /></li>
+      </ul>
+      <button @click.prevent="login">Login</button> or <button class="ghost" @click.prevent="signup">Sign up</button>
+    </form>
   </section>
 </template>
 
@@ -19,8 +22,8 @@ export default {
 
   data() {
     return {
-      email: 'hello@silvestre.io',
-      password: 'retrete'
+      email: 'hey@silvestre.io',
+      password: 'password'
     };
   },
 
@@ -43,4 +46,15 @@ export default {
   }
 }
 </script>
+
+<style>
+.auth-form ul {
+  list-style: none;
+  padding: 0;
+}
+
+.auth-form li + li {
+  margin-top: .5em;
+}
+</style>
 
