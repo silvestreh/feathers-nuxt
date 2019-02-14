@@ -15,9 +15,12 @@ Remember to set these environment variables when running in production:
 ```shell
 NODE_ENV=production
 PORT=3030 # or whatever port you want to use
+API_URL=https://yourappdomain.com/ # this is where the API is running
 ```
 
 After that, you can safely start the application by using `npm start`, which will trigger a Nuxt build and then start the app.
+
+Here's a [working demo](https://feathers-nuxt.herokuapp.com/) running on Heroku.
 
 ## ⚠️ Support
 
