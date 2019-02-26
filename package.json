@@ -57,7 +57,7 @@
   "devDependencies": {
     "cross-env": "^5.2.0",
     "eslint": "^5.13.0",
-    "mocha": "^5.2.0",
+    "mocha": "^6.0.2",
     "nodemon": "^1.18.10",
     "request": "^2.88.0",
     "request-promise": "^4.2.2"
