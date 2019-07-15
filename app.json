@@ -1,0 +1,19 @@
+{
+  "name": "Feathers + Nuxt",
+  "description": "A FeathersJS + Nuxt demo/boilerplate",
+  "repository": "https://github.com/silvestreh/feathers-nuxt",
+  "logo": "https://feathersjs.com/img/feathers-circle-logo-grey.png",
+  "keywords": [
+    "node",
+    "express",
+    "feathers",
+    "vuejs",
+    "nuxtjs",
+    "nuxt",
+    "vue",
+    "feathersjs",
+    "realtime",
+    "socketio",
+    "ssr"
+  ]
+}
