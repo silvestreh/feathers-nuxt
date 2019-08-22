@@ -11,29 +11,10 @@ const getUrl = pathname => url.format({
   pathname
 });
 
+require('../src');
+
 describe('Feathers application tests', () => {
-  before(function(done) {
-    this.server = app.listen(port);
-    this.server.once('listening', () => done());
-  });
-
-  after(function(done) {
-    this.server.close(done);
-  });
-
-  describe('404', function() {
-    it('shows a 404 HTML page', () => {
-      return rp({
-        url: getUrl('path/to/nowhere'),
-        headers: {
-          'Accept': 'text/html'
-        }
-      }).catch(res => {
-        assert.equal(res.statusCode, 404);
-        assert.ok(res.error.indexOf('<html>') !== -1);
-      });
-    });
-
+  describe('404', () => {
     it('shows a 404 JSON error without stack trace', () => {
       return rp({
         url: getUrl('path/to/nowhere'),

@@ -24,7 +24,8 @@
   },
   "scripts": {
     "build": "nuxt build",
-    "test": "npm run eslint && npm run mocha",
+    "coverage": "cross-env NODE_ENV=test nyc npm run mocha",
+    "test": "npm run eslint && npm run coverage",
     "eslint": "eslint src/. test/. --config .eslintrc.json",
     "dev": "cross-env DEBUG=nuxt:* nodemon src/",
     "start": "npm run build && node src/",
@@ -41,25 +42,26 @@
     "@feathersjs/feathers": "^3.3.1",
     "@feathersjs/socketio": "^3.2.9",
     "@feathersjs/socketio-client": "^1.2.1",
-    "compression": "^1.7.3",
-    "cookie-storage": "^5.0.1",
+    "compression": "^1.7.4",
+    "cookie-storage": "^5.0.3",
     "cors": "^2.8.5",
-    "feathers-nedb": "^4.0.1",
-    "feathers-vuex": "^1.6.2",
-    "helmet": "^3.15.0",
+    "feathers-nedb": "^5.0.1",
+    "feathers-vuex": "^1.7.0",
+    "helmet": "^3.20.0",
     "nedb": "^1.8.0",
     "normalize.css": "^8.0.1",
-    "nuxt": "^2.8.1",
+    "nuxt": "^2.9.1",
     "serve-favicon": "^2.5.0",
     "socket.io-client": "^2.2.0",
     "winston": "^3.2.1"
   },
   "devDependencies": {
     "cross-env": "^5.2.0",
-    "eslint": "^5.13.0",
-    "mocha": "^6.0.2",
-    "nodemon": "^1.18.10",
+    "eslint": "^6.2.1",
+    "mocha": "^6.2.0",
+    "nodemon": "^1.19.1",
+    "nyc": "^14.1.1",
     "request": "^2.88.0",
-    "request-promise": "^4.2.2"
+    "request-promise": "^4.2.4"
   }
 }
