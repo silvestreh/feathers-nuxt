@@ -1,11 +1,14 @@
 const { resolve } = require('path');
 const package = require('./package.json');
+const config = require('./config/default.json');
+
+const isDev = !['production', 'test'].includes(process.env.NODE_ENV);
 
 module.exports = {
-  dev: process.env.NODE_ENV !== 'production',
+  dev: isDev,
   srcDir: resolve(__dirname, './client'),
   router: { middleware: ['auth'] },
-  env: { apiURL: process.env.API_URL || 'http://localhost:3030' },
+  env: { apiURL: process.env.API_URL || `http://localhost:${config.port}` },
   head: {
     title: `${package.name} — ${package.description}`,
     meta: [

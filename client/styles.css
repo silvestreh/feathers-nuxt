@@ -12,11 +12,13 @@ section {
 }
 
 button {
+  align-items: center;
   background: coral;
   border: 1px solid transparent;
   border-radius: .25em;
   color: white;
   cursor: pointer;
+  display: inline-flex;
   font-size: .85em;
   line-height: 2.5;
   padding: 0 1em;
@@ -26,6 +28,23 @@ button.ghost {
   border-color: coral;
   background: none;
   color: coral;
+}
+
+button.is-loading::before {
+  animation: spin 1s infinite linear;
+  border: .125em solid white;
+  border-radius: 50%;
+  border-top-color: transparent;
+  content: '';
+  display: inline-block;
+  height: 1em;
+  margin-right: 1em;
+  width: 1em;
+}
+
+button.ghost.is-loading::before {
+  border-color: coral;
+  border-top-color: transparent;
 }
 
 input {
@@ -38,4 +57,9 @@ input {
 input:focus {
   border-color: coral;
   outline: none;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(359deg); }
 }
