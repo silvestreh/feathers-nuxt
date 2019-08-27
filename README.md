@@ -26,7 +26,7 @@ Here's a [working demo](https://feathers-nuxt.herokuapp.com/) running on Heroku.
 
 ## ⚠️ Support
 
-You may use this boilerplate for whatever projects you want, but beware that updates to it will be scarse. You're very much welcome to contribute if you find something is off.
+You may use this boilerplate for whatever projects you want, but beware that updates to it could be scarse. You're very much welcome to contribute if you find something is off.
 
 ## Getting Started
 
@@ -68,12 +68,6 @@ For more information on all the things you can do with Feathers visit [docs.feat
 For more information on `feathers-vuex`, visit [their docs](https://feathers-plus.github.io/v1/feathers-vuex/index.html).
 
 For more information on `nuxt`, visit [their docs](https://nuxtjs.org/guide).
-
-## Changelog
-
-__0.0.0__
-
-- Initial release
 
 ## License
 
