@@ -7,7 +7,6 @@ const isDev = !['production', 'test'].includes(process.env.NODE_ENV);
 module.exports = {
   dev: isDev,
   srcDir: resolve(__dirname, './client'),
-  router: { middleware: ['auth'] },
   env: { apiURL: process.env.API_URL || `http://localhost:${config.port}` },
   head: {
     title: `${package.name} — ${package.description}`,
@@ -19,5 +18,6 @@ module.exports = {
   css: [
     'normalize.css/normalize.css',
     './client/styles.css'
-  ]
+  ],
+  build: { transpile: ['feathers-vuex'] }
 };
