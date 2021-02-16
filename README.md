@@ -18,6 +18,7 @@ Remember to set these environment variables when running in production:
 NODE_ENV=production
 PORT=3030 # or whatever port you want to use
 API_URL=https://yourappdomain.com/ # this is where the API is running
+AUTH_SECRET=[super-secret-hash] # make it long (>512 chars), and NEVER check it into source control
 ```
 
 After that, you can safely start the application by using `npm start`, which will trigger a Nuxt build and then start the app.
@@ -28,6 +29,8 @@ Here's a [working demo](https://feathers-nuxt.herokuapp.com/) running on Heroku.
 
 You may use this boilerplate for whatever projects you want, but beware that updates to it will be scarse. You're very much welcome to contribute if you find something is off.
 
+> **Latest Update:** 2021-02-16
+
 ## Getting Started
 
 Getting up and running is as easy as 1, 2, 3.
@@ -35,15 +38,15 @@ Getting up and running is as easy as 1, 2, 3.
 1. Make sure you have [NodeJS](https://nodejs.org/) and [npm](https://www.npmjs.com/) installed.
 2. Install your dependencies
 
-    ```
-    cd path/to/feathers-nuxt; npm install
-    ```
+   ```
+   cd path/to/feathers-nuxt; npm install
+   ```
 
 3. Start your app
 
-    ```
-    npm start
-    ```
+   ```
+   npm start
+   ```
 
 ## Testing
 
@@ -63,7 +66,7 @@ $ feathers help                           # Show all commands
 
 ## Help
 
-For more information on all the things you can do with Feathers visit [docs.feathersjs.com](http://docs.feathersjs.com).
+For more information on all the things you can do with Feathers visit [docs.feathersjs.com](http://docs.feathersjs.com) and join us on [Slack](https://slack.feathersjs.com/).
 
 For more information on `feathers-vuex`, visit [their docs](https://feathers-plus.github.io/v1/feathers-vuex/index.html).
 
@@ -71,7 +74,7 @@ For more information on `nuxt`, visit [their docs](https://nuxtjs.org/guide).
 
 ## Changelog
 
-__0.0.0__
+**0.0.0**
 
 - Initial release
 
