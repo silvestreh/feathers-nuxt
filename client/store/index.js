@@ -1,27 +1,27 @@
-import feathersClient from '../feathers-client';
-import feathersVuex, { initAuth } from 'feathers-vuex';
+import Vue from 'vue';
+import Vuex from 'vuex';
+import { FeathersVuex } from '../feathers-client';
+import auth from './store.auth';
 
-const { service, auth } = feathersVuex(feathersClient, { idField: '_id' });
+Vue.use(Vuex);
+Vue.use(FeathersVuex);
 
-export const state = () => ({});
-export const mutations = {};
+const requireModule = require.context(
+  // The path where the service modules live
+  './services',
+  // Whether to look in subfolders
+  false,
+  // Only include .js files (prevents duplicate imports`)
+  /\.js$/
+);
+const servicePlugins = requireModule
+  .keys()
+  .map(modulePath => requireModule(modulePath).default);
 
-export const actions = {
-  nuxtServerInit({ commit, dispatch }, { req }) {
-    return initAuth({
-      commit,
-      dispatch,
-      req,
-      moduleName: 'auth',
-      cookieName: 'feathers-jwt'
-    })
-  }
-};
-
-export const plugins = [
-  service('users'),
-  auth({
-    state: { publicPages: ['index', 'authenticate'] },
-    userService: 'users'
-  })
-];
+export default () =>
+  new Vuex.Store({
+    state: {},
+    mutations: {},
+    actions: {},
+    plugins: [...servicePlugins, auth]
+  });
